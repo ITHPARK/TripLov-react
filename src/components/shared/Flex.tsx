@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import { CSSProperties } from 'react'
+import styled from '@emotion/styled'
 
 //flexbox 타입
 interface FlexProps {
