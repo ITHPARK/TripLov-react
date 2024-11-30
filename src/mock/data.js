@@ -1,94 +1,94 @@
 export const HOTEL_NAMES = [
-  '소테츠 그랜드 프레사 오사카 - 난바',
-  '도미 인 프리미엄 남바 내추럴 핫 스프링',
-  '칸데오 호텔스 오사카 남바',
-  '오사카 후지야 호텔',
-  '아고라 플레이스 오사카 남바',
-  '온야도 노노 난바 내추럴 핫 스프링',
-  '이비스 스타일스 오사카  남바',
-  '사쿠라 테라스 더 갤러리',
-  '남바 오리엔탈 호텔',
-  '호텔 일 쿠오레 남바',
-  '호텔한큐레스파이어오사카',
-  '호텔 몬토레 그라스미아 오사카',
-  '하튼 호텔 신사이바시',
-  '호텔 뉴 한큐 오사카',
-  '레드 루프 인 & 스위트 오사카 - 남바/닛폰바시',
-  '온야도 노노 교토시치조 내추럴 핫 스프링스',
-  '홀리데이 인 오사카 남바',
+    '소테츠 그랜드 프레사 오사카 - 난바',
+    '도미 인 프리미엄 남바 내추럴 핫 스프링',
+    '칸데오 호텔스 오사카 남바',
+    '오사카 후지야 호텔',
+    '아고라 플레이스 오사카 남바',
+    '온야도 노노 난바 내추럴 핫 스프링',
+    '이비스 스타일스 오사카  남바',
+    '사쿠라 테라스 더 갤러리',
+    '남바 오리엔탈 호텔',
+    '호텔 일 쿠오레 남바',
+    '호텔한큐레스파이어오사카',
+    '호텔 몬토레 그라스미아 오사카',
+    '하튼 호텔 신사이바시',
+    '호텔 뉴 한큐 오사카',
+    '레드 루프 인 & 스위트 오사카 - 남바/닛폰바시',
+    '온야도 노노 교토시치조 내추럴 핫 스프링스',
+    '홀리데이 인 오사카 남바',
 ]
 
 export const IMAGES = [
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Hakone_Ginyu.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Hoshinoya_Kyoto.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/The_Peninsula_Tokyo.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Fujikawaguchiko_Onsen_Konanso.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/9_Hours_Capsule_Hotel.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Gate_Hotel_Asakusa_Kaminarimon.jpg',
-  'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/The_Windsor_Hotel_Toya.jpg',
-  'https://www.touropia.com/gfx/b/2018/06/kyoto-750x400.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/kinosaki_onsen.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/shirakawa_gokayama.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/shirakawa_go.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/osaka.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/osaka_castle.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/kiso_valley.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/koya_san.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/ishigaki.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/miyajima.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/kanazawa.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/hiroshima.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/hiroshima_2.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/nikko.jpg',
-  'https://www.touropia.com/gfx/b/2015/05/nikko_shrine.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Hakone_Ginyu.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Hoshinoya_Kyoto.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/The_Peninsula_Tokyo.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Fujikawaguchiko_Onsen_Konanso.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/9_Hours_Capsule_Hotel.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/Gate_Hotel_Asakusa_Kaminarimon.jpg',
+    'https://www.touropia.com/gfx/d/amazing-hotels-in-japan/The_Windsor_Hotel_Toya.jpg',
+    'https://www.touropia.com/gfx/b/2018/06/kyoto-750x400.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/kinosaki_onsen.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/shirakawa_gokayama.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/shirakawa_go.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/osaka.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/osaka_castle.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/kiso_valley.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/koya_san.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/ishigaki.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/miyajima.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/kanazawa.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/hiroshima.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/hiroshima_2.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/nikko.jpg',
+    'https://www.touropia.com/gfx/b/2015/05/nikko_shrine.jpg',
 ]
 
 export const EVENTS = [
-  {
-    name: '단독 특가',
-    tagThemeStyle: {
-      fontColor: '#FFFFFF',
-      backgroundColor: '#37A8FF',
+    {
+        name: '단독 특가',
+        tagThemeStyle: {
+            fontColor: '#FFFFFF',
+            backgroundColor: '#37A8FF',
+        },
     },
-  },
-  {
-    name: 'LOVE TRIP BEST',
-    tagThemeStyle: {
-      fontColor: '#FFFFFF',
-      backgroundColor: '#26CEC2',
+    {
+        name: 'LOVE TRIP BEST',
+        tagThemeStyle: {
+            fontColor: '#FFFFFF',
+            backgroundColor: '#26CEC2',
+        },
     },
-  },
-  {
-    name: '신축호텔',
-    tagThemeStyle: {
-      fontColor: '#FFFFFF',
-      backgroundColor: '#1f57fa',
+    {
+        name: '신축호텔',
+        tagThemeStyle: {
+            fontColor: '#FFFFFF',
+            backgroundColor: '#1f57fa',
+        },
     },
-  },
-  {
-    name: '핫딜',
-    promoEndTime: '2024-12-25T00:00:00+09:00',
-    tagThemeStyle: {
-      fontColor: '#FFFFFF',
-      backgroundColor: '#1f57fa',
+    {
+        name: '핫딜',
+        promoEndTime: '2024-12-25T00:00:00+09:00',
+        tagThemeStyle: {
+            fontColor: '#FFFFFF',
+            backgroundColor: '#1f57fa',
+        },
     },
-  },
 ]
 
 export const HOTEL = {
-  // 소개글
-  comment: '여성 전용층과 리버 뷰 객실을 갖춘 지하철역 근처 호텔',
-  // 이벤트 여부
-  location: {
-    // 좌표
-    pointGeolocation: {
-      x: 139.70167,
-      y: 35.6949,
+    // 소개글
+    comment: '여성 전용층과 리버 뷰 객실을 갖춘 지하철역 근처 호텔',
+    // 이벤트 여부
+    location: {
+        // 좌표
+        pointGeolocation: {
+            x: 139.70167,
+            y: 35.6949,
+        },
+        // 찾아오시는길
+        directions: '신주쿠 역 O-2 출구에서 도보 3분',
     },
-    // 찾아오시는길
-    directions: '신주쿠 역 O-2 출구에서 도보 3분',
-  },
-  contents: `
+    contents: `
 ## 난바 역 도보 5분! 위치만으로 여행객들에게 인기 있는 호텔    
 - 난바 역 도보 5분    
 - 쇼핑을 즐기기 탁월한 위치    
@@ -119,91 +119,91 @@ export const HOTEL = {
 }
 
 export const ROOMS = [
-  {
-    price: 130000,
-    roomName: 'Single room',
-    avaliableCount: 2,
-    basicInfo: {
-      squareMeters: '16m²',
-      maxOccupancy: 4,
-      bed: '싱글 침대 2개',
-      smoke: '금연',
+    {
+        price: 130000,
+        roomName: 'Single room',
+        avaliableCount: 2,
+        basicInfo: {
+            squareMeters: '16m²',
+            maxOccupancy: 4,
+            bed: '싱글 침대 2개',
+            smoke: '금연',
+        },
+        refundable: true,
+        imageUrl: 'https://www.japan-guide.com/g9/2007_tatami.jpg',
     },
-    refundable: true,
-    imageUrl: 'https://www.japan-guide.com/g9/2007_tatami.jpg',
-  },
-  {
-    price: 150000,
-    roomName: 'Double room',
-    avaliableCount: 2,
-    basicInfo: {
-      squareMeters: '16m²',
-      maxOccupancy: 4,
-      bed: '더블 또는 세미더블 중 랜덤',
+    {
+        price: 150000,
+        roomName: 'Double room',
+        avaliableCount: 2,
+        basicInfo: {
+            squareMeters: '16m²',
+            maxOccupancy: 4,
+            bed: '더블 또는 세미더블 중 랜덤',
+        },
+        refundable: true,
+        imageUrl: 'https://www.japan-guide.com/g9/2007_alcove.jpg',
     },
-    refundable: true,
-    imageUrl: 'https://www.japan-guide.com/g9/2007_alcove.jpg',
-  },
-  {
-    price: 200000,
-    roomName: '트윈룸, 여성 전용, 금연',
-    avaliableCount: 0,
-    basicInfo: {
-      squareMeters: '16m²',
-      maxOccupancy: 4,
-      bed: '랜덤 제공',
-      smoke: '금연',
+    {
+        price: 200000,
+        roomName: '트윈룸, 여성 전용, 금연',
+        avaliableCount: 0,
+        basicInfo: {
+            squareMeters: '16m²',
+            maxOccupancy: 4,
+            bed: '랜덤 제공',
+            smoke: '금연',
+        },
+        refundable: false,
+        imageUrl: 'https://www.japan-guide.com/g9/2007_tsukeshoin.jpg',
     },
-    refundable: false,
-    imageUrl: 'https://www.japan-guide.com/g9/2007_tsukeshoin.jpg',
-  },
 ]
 
 export const FORMS = [
-  {
-    id: 'name',
-    label: '한글명',
-    required: true,
-    type: 'TEXT_FIELD',
-  },
-  {
-    id: 'phone',
-    label: '휴대전화번호',
-    required: true,
-    type: 'TEXT_FIELD',
-  },
-  {
-    id: 'email',
-    label: '이메일',
-    required: true,
-    type: 'TEXT_FIELD',
-  },
-  {
-    id: 'isSmoke',
-    label: '흡연여부',
-    required: false,
-    type: 'SELECT',
-    options: [
-      {
-        label: '상관없음',
-        value: '',
-      },
-      {
-        label: '흡연',
-        value: 'true',
-      },
-      {
-        label: '비흡연',
-        value: 'false',
-      },
-    ],
-  },
-  {
-    id: 'special_request',
-    label: '요청사항',
-    required: false,
-    type: 'TEXT_FIELD',
-    helpMessage:
-      '요청사항은 모두 전달되나 현지 숙소 사정에 따라 반영되지 않을 수 있습니다.',
-  },
+    {
+        id: 'name',
+        label: '한글명',
+        required: true,
+        type: 'TEXT_FIELD',
+    },
+    {
+        id: 'phone',
+        label: '휴대전화번호',
+        required: true,
+        type: 'TEXT_FIELD',
+    },
+    {
+        id: 'email',
+        label: '이메일',
+        required: true,
+        type: 'TEXT_FIELD',
+    },
+    {
+        id: 'isSmoke',
+        label: '흡연여부',
+        required: false,
+        type: 'SELECT',
+        options: [
+            {
+                label: '상관없음',
+                value: '',
+            },
+            {
+                label: '흡연',
+                value: 'true',
+            },
+            {
+                label: '비흡연',
+                value: 'false',
+            },
+        ],
+    },
+    {
+        id: 'special_request',
+        label: '요청사항',
+        required: false,
+        type: 'TEXT_FIELD',
+        helpMessage:
+            '요청사항은 모두 전달되나 현지 숙소 사정에 따라 반영되지 않을 수 있습니다.',
+    },
 ]

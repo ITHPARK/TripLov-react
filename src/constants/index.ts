@@ -1,4 +1,4 @@
 export const COLLECTIONS = {
-  HOTEL: 'HOTEL',
-  ROOMS: 'ROOMS',
+    HOTEL: 'HOTEL',
+    ROOMS: 'ROOMS',
 }

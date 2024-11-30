@@ -17,12 +17,12 @@ const opacity = keyframes`
 `
 
 const Skeleton = styled.div<{ width: number; height: number }>(
-  ({ width, height }) => ({
-    width,
-    height,
-    backgroundColor: colors.gray,
-    animation: `${opacity} 2s ease-in-out 0.5s infiite`,
-  }),
+    ({ width, height }) => ({
+        width,
+        height,
+        backgroundColor: colors.gray,
+        animation: `${opacity} 2s ease-in-out 0.5s infiite`,
+    }),
 )
 
 export default Skeleton
