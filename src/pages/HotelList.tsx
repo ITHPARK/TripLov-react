@@ -3,9 +3,16 @@ import useHotels from '@components/hotelList/hooks/useHotel'
 import Top from '@shared/Top'
 import Spacing from '@shared/Spacing'
 import Hotel from '@/components/hotelList/Hotel'
-import InfiniteScroll from 'react-infinite-scroller'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+import { css } from '@emotion/react'
 
 const HotelList = () => {
+    const lastHotelRef = useIntersectionObserver(() => {
+        if (!isLoading && hasNextPage) {
+            loadMore()
+        }
+    })
+
     /*
     hotels : 호텔 데이터 배열
     isLoading : 로딩중인지 확인
@@ -26,27 +33,34 @@ const HotelList = () => {
         <div>
             <Top title={'인기 호텔'} subTitle={'호텔부터 펜션까지 최저가'} />
 
-            <InfiniteScroll
-                pageStart={0}
-                hasMore={hasNextPage}
-                loader={<>LOading...</>}
-                loadMore={loadMore}
+            <ul
+                css={css`
+                    position: relative;
+                `}
             >
-                <ul>
-                    {hotels?.map((hotel) => {
-                        console.log(hotel)
-                        return (
-                            <Fragment>
-                                <Hotel hotel={hotel} />
-                                <Spacing
-                                    size={7}
-                                    backgroundColor={'gray100'}
-                                ></Spacing>
-                            </Fragment>
-                        )
-                    })}
-                </ul>
-            </InfiniteScroll>
+                {hotels?.map((hotel, index) => {
+                    const isLast = index === hotels.length - 1
+                    return (
+                        <Fragment>
+                            <Hotel hotel={hotel} />
+                            <Spacing
+                                size={7}
+                                backgroundColor={'gray100'}
+                            ></Spacing>
+                            {isLast && (
+                                <div
+                                    ref={lastHotelRef}
+                                    style={{
+                                        height: '300px',
+                                        position: 'absolute',
+                                        bottom: 0,
+                                    }}
+                                />
+                            )}
+                        </Fragment>
+                    )
+                })}
+            </ul>
         </div>
     )
 }
