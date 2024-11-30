@@ -4,6 +4,7 @@ import Text from './Text'
 import { css } from '@emotion/react'
 import Skeleton from './Skeleton'
 import Spacing from './Spacing'
+import { SerializedStyles } from '@emotion/react'
 
 interface ListRowProps {
     left?: React.ReactNode
@@ -12,6 +13,7 @@ interface ListRowProps {
     withArrow?: boolean
     onClick?: () => void
     as?: 'div' | 'li'
+    style?: SerializedStyles
 }
 
 const ListRow = ({
@@ -21,17 +23,13 @@ const ListRow = ({
     right,
     withArrow,
     onClick,
+    style,
 }: ListRowProps) => {
     return (
-        <Flex
-            as={as}
-            css={listRowContainerStyles}
-            onClick={onClick}
-            align="center"
-        >
-            <Flex css={listLeftStyles}>{left}</Flex>
+        <Flex as={as} css={listRowContainerStyles} onClick={onClick}>
+            {left && <Flex css={listLeftStyles}>{left}</Flex>}
             <Flex css={listRowContentStyles}>{contents}</Flex>
-            <Flex>{right}</Flex>
+            {right && <Flex>{right}</Flex>}
             {withArrow ? <IconArrowRight /> : null}
         </Flex>
     )
