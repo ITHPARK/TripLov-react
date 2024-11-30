@@ -6058,6 +6058,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-fns@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "data-fns@npm:1.1.0"
+  dependencies:
+    unit-fns: "npm:^0.1.6"
+  checksum: 10c0/d6d86087b4841bfc727f139edb6c0318c8ccf8e2a29ed52879c6b944287eb587283f0a32f92aa4bd2f3171a5fc577f3098eff88aff0b5932e037ab26e5e76080
+  languageName: node
+  linkType: hard
+
 "data-urls@npm:^2.0.0":
   version: 2.0.0
   resolution: "data-urls@npm:2.0.0"
@@ -6099,6 +6108,13 @@ __metadata:
     es-errors: "npm:^1.3.0"
     is-data-view: "npm:^1.0.1"
   checksum: 10c0/21b0d2e53fd6e20cc4257c873bf6d36d77bd6185624b84076c0a1ddaa757b49aaf076254006341d35568e89f52eecd1ccb1a502cfb620f2beca04f48a6a62a8f
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "date-fns@npm:4.1.0"
+  checksum: 10c0/b79ff32830e6b7faa009590af6ae0fb8c3fd9ffad46d930548fbb5acf473773b4712ae887e156ba91a7b3dc30591ce0f517d69fd83bd9c38650fdc03b4e0bac8
   languageName: node
   linkType: hard
 
@@ -12392,6 +12408,8 @@ __metadata:
     "@types/react-dom": "npm:^18.0.0"
     "@types/react-infinite-scroller": "npm:^1"
     craco-alias: "npm:^3.0.1"
+    data-fns: "npm:^1.1.0"
+    date-fns: "npm:^4.1.0"
     eslint: "npm:8.46.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-config-react-app: "npm:^7.0.1"
@@ -14303,6 +14321,13 @@ __metadata:
   dependencies:
     crypto-random-string: "npm:^2.0.0"
   checksum: 10c0/11820db0a4ba069d174bedfa96c588fc2c96b083066fafa186851e563951d0de78181ac79c744c1ed28b51f9d82ac5b8196ff3e4560d0178046ef455d8c2244b
+  languageName: node
+  linkType: hard
+
+"unit-fns@npm:^0.1.6":
+  version: 0.1.9
+  resolution: "unit-fns@npm:0.1.9"
+  checksum: 10c0/00cc3686fffbe82a6f28cc840922860f8503425d86b8f7d59795557f0c21151cc0ba9d3318e9fc30f4a43fc52241715334b2b122a83b8c066b1f516ff9ea774f
   languageName: node
   linkType: hard
 

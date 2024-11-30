@@ -46,6 +46,7 @@ const useIntersectionObserver = (
         }
     }, [onIntersect, options])
 
+    //ref를 리턴
     return observerRef
 }
 

@@ -13,6 +13,8 @@
         "@types/node": "^16.7.13",
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
+        "data-fns": "^1.1.0",
+        "date-fns": "^4.1.0",
         "eslint": "8.46.0",
         "firebase": "^11.0.2",
         "react": "^18.3.1",
