@@ -11,7 +11,7 @@ import { formatTime } from '@/utils/formatTime'
 import { differenceInMilliseconds, parseISO } from 'date-fns'
 import { Link } from 'react-router-dom'
 
-const Hotel = ({ hotel }: { hotel: HotelProps }) => {
+const HotelItem = ({ hotel }: { hotel: HotelProps }) => {
     const [remaining, setRemaining] = useState(0)
 
     useEffect(() => {
@@ -100,4 +100,4 @@ const imageBox = css`
     object-fit: cover;
 `
 
-export default Hotel
+export default HotelItem

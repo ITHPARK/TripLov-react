@@ -6,6 +6,8 @@ import {
     limit,
     startAfter,
     DocumentData,
+    getDoc,
+    doc,
 } from 'firebase/firestore'
 import { store } from '@remote/firebase'
 
@@ -45,5 +47,16 @@ export const getHotels = async (
     return {
         items: items,
         lastVisible: lastVisible,
+    }
+}
+
+//id 값에 따른 호텔 정보를 가져오는 함수
+export const getHotel = async (id: string) => {
+    //doc = 1개의 문서만 가져오는 함수doc(db, 컬렉션이름, 값)
+    const snapshot = await getDoc(doc(store, COLLECTIONS.HOTEL, id))
+    return {
+        ...(snapshot.data() as HotelProps),
+        //위 데이터에 이미 id가 있기때문에 id를 덮어씌워준다.
+        id,
     }
 }

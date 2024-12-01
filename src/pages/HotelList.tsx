@@ -2,7 +2,7 @@ import { useEffect, Fragment } from 'react'
 import useHotels from '@components/hotelList/hooks/useHotel'
 import Top from '@shared/Top'
 import Spacing from '@shared/Spacing'
-import Hotel from '@/components/hotelList/Hotel'
+import HotelItem from '@/components/hotelList/HotelItem'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import { css } from '@emotion/react'
 
@@ -42,7 +42,7 @@ const HotelList = () => {
                     const isLast = index === hotels.length - 1
                     return (
                         <Fragment>
-                            <Hotel hotel={hotel} />
+                            <HotelItem hotel={hotel} />
                             <Spacing
                                 size={7}
                                 backgroundColor={'gray100'}

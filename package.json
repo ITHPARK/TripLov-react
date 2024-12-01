@@ -22,6 +22,7 @@
         "react-infinite-scroller": "^1.2.6",
         "react-router-dom": "^7.0.1",
         "react-scripts": "5.0.1",
+        "swiper": "^11.1.15",
         "typescript": "^5.7.2",
         "web-vitals": "^2.1.0"
     },
