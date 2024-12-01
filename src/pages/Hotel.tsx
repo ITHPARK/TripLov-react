@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import Carousel from '@/components/hotel/Carousel'
+import Content from '@/components/hotel/Content'
+import Rooms from '@/components/hotel/Rooms'
 import useHotel from '@components/hotel/hooks/useHotel'
 import { useParams } from 'react-router-dom'
 import Top from '@components/shared/Top'
@@ -11,7 +13,7 @@ const Hotel = () => {
 
     useEffect(() => {
         if (data != null) {
-            console.log(data.name)
+            console.log(data)
         }
     }, [data])
 
@@ -23,6 +25,8 @@ const Hotel = () => {
             {' '}
             <Top title={data.name} subTitle={data.comment} />
             <Carousel images={data.images} />
+            <Content contents={data.contents} />
+            <Rooms hotelId={data.id} />
         </>
     )
 }
