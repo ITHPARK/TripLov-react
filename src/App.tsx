@@ -3,7 +3,11 @@ import HotelList from '@pages/HotelList'
 import Hotel from '@pages/Hotel'
 import Test from '@pages/Test'
 
+import useLoadKakao from '@hooks/useLoadKakao'
+
 function App() {
+    useLoadKakao()
+
     return (
         <BrowserRouter>
             <Routes>
