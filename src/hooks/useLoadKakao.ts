@@ -19,7 +19,6 @@ const useLoadKakao = () => {
         script.onload = () => {
             if (!window.Kakao.isInitialized()) {
                 window.Kakao.init(process.env.REACT_APP_KAKAO_API_KEY)
-                console.log('Kakao SDK initialized:', window.Kakao)
             }
         }
 

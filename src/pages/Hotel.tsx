@@ -14,12 +14,6 @@ const Hotel = () => {
 
     const { data, isLoading } = useHotel({ id })
 
-    useEffect(() => {
-        if (data != null) {
-            console.log(data)
-        }
-    }, [data])
-
     if (data == null || isLoading) {
         return <div>Loading...</div>
     }

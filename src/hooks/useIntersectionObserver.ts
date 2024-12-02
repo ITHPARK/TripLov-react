@@ -20,9 +20,6 @@ const useIntersectionObserver = (
                     if (entry.isIntersecting) {
                         //콜백 함수 실행
                         onIntersect()
-
-                        //entry.target은 ref요소
-                        console.log(entry.target)
                     }
                 })
             },

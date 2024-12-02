@@ -5,11 +5,12 @@ import Flex from '@shared/Flex'
 import { colors } from '@styles/colorPalette'
 import { css } from '@emotion/react'
 import { useCallback } from 'react'
+import useUser from '@hooks/auth/useUser'
 
 const Navbar = () => {
     const location = useLocation()
 
-    const user = null
+    const user = useUser()
 
     const handleLogOut = useCallback(() => {
         // signOut(auth)
@@ -24,7 +25,16 @@ const Navbar = () => {
 
             return (
                 <Link to="/my">
-                    <img src="" alt="" />
+                    <img
+                        src={
+                            user.photoURL ??
+                            'https://cdn2.iconfinder.com/data/icons/squircle-ui/32/Avatar-64.png'
+                        }
+                        alt="유저이미지"
+                        width={40}
+                        height={40}
+                        style={{ borderRadius: '50%' }}
+                    />
                 </Link>
             )
         }
@@ -56,7 +66,7 @@ const Navbar = () => {
                     letter-spacing: -0.03em;
                 `}
             >
-                APLcard
+                TripLove
             </Link>
             {renderButton()}
         </Flex>

@@ -21,10 +21,6 @@ const HotelList = () => {
      */
     const { data: hotels, isLoading, hasNextPage, loadMore } = useHotels()
 
-    useEffect(() => {
-        console.log(hotels)
-    }, [hotels])
-
     if (isLoading) {
         return <div>Loading...</div>
     }

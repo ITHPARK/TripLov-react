@@ -14,10 +14,6 @@ import Button from '../shared/Button'
 const Rooms = ({ hotelId }: { hotelId: string }) => {
     const { data } = useRooms(hotelId)
 
-    useEffect(() => {
-        console.log(data)
-    }, [data])
-
     return (
         <Container>
             <Header justify="space-between" align="center">
