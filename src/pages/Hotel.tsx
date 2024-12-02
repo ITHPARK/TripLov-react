@@ -5,6 +5,8 @@ import Rooms from '@/components/hotel/Rooms'
 import useHotel from '@components/hotel/hooks/useHotel'
 import { useParams } from 'react-router-dom'
 import Top from '@components/shared/Top'
+import Map from '@components/hotel/Map'
+import RecommendList from '@components/hotel/RecommendList'
 
 const Hotel = () => {
     const { id } = useParams() as { id: string }
@@ -27,6 +29,8 @@ const Hotel = () => {
             <Carousel images={data.images} />
             <Content contents={data.contents} />
             <Rooms hotelId={data.id} />
+            <Map location={data.location} />
+            <RecommendList hotelIds={data.recommendHotelList} />
         </>
     )
 }

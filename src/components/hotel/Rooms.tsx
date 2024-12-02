@@ -28,12 +28,13 @@ const Rooms = ({ hotelId }: { hotelId: string }) => {
                     1박, 세금 포함
                 </Text>
             </Header>
-            {data?.map((room) => {
+            {data?.map((room, index) => {
                 const promoEnd = room.avaliableCount === 1
                 const noRoom = room.avaliableCount === 0
 
                 return (
                     <ListRow
+                        key={index}
                         left={
                             <img
                                 src={room.imageUrl}

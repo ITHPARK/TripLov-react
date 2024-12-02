@@ -16,4 +16,5 @@ export interface HotelProps {
             fontColor: string
         }
     }
+    recommendHotelList: string[]
 }

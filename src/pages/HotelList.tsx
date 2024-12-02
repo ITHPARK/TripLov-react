@@ -42,7 +42,7 @@ const HotelList = () => {
                     const isLast = index === hotels.length - 1
                     return (
                         <Fragment>
-                            <HotelItem hotel={hotel} />
+                            <HotelItem hotel={hotel} key={index} />
                             <Spacing
                                 size={7}
                                 backgroundColor={'gray100'}
@@ -51,7 +51,7 @@ const HotelList = () => {
                                 <div
                                     ref={lastHotelRef}
                                     style={{
-                                        height: '300px',
+                                        height: '150px',
                                         position: 'absolute',
                                         bottom: 0,
                                     }}

@@ -8,6 +8,8 @@ import {
     DocumentData,
     getDoc,
     doc,
+    where,
+    documentId,
 } from 'firebase/firestore'
 import { store } from '@remote/firebase'
 
@@ -59,4 +61,21 @@ export const getHotel = async (id: string) => {
         //위 데이터에 이미 id가 있기때문에 id를 덮어씌워준다.
         id,
     }
+}
+
+//추천 호텔의 정보를 가져오는 함수
+export const getRecommendHotels = async (hotelIds: string[]) => {
+    const recommendQuery = query(
+        collection(store, COLLECTIONS.HOTEL),
+
+        //documentId는 문서의 id값만 가져온다.
+        //id값을 가져와서 hotelIds 추천 리스트에 포함되는 id의 문서만 가져오게하는 조건
+        where(documentId(), 'in', hotelIds),
+    )
+
+    const snapshot = await getDocs(recommendQuery)
+
+    return snapshot.docs.map((hotel) => ({
+        ...(hotel.data() as HotelProps),
+    }))
 }
