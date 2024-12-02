@@ -5,6 +5,7 @@ import Spacing from '@shared/Spacing'
 import Text from '@shared/Text'
 import { HotelProps } from '@/models/hotel'
 import useShare from '@/hooks/useShare'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const ActionButtons = ({ hotel }: { hotel: HotelProps }) => {
     const share = useShare()
@@ -19,7 +20,7 @@ const ActionButtons = ({ hotel }: { hotel: HotelProps }) => {
                     'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-64.png'
                 }
                 onClick={() => {}}
-            ></Button>
+            />
             <Button
                 label="공유하기"
                 iconUrl={
@@ -33,14 +34,21 @@ const ActionButtons = ({ hotel }: { hotel: HotelProps }) => {
                         buttonLabel: '앱에서 보기',
                     })
                 }}
-            ></Button>
-            <Button
-                label="링크복사"
-                iconUrl={
-                    'https://cdn0.iconfinder.com/data/icons/evericons-24px-vol-1/24/clipboard-64.png'
-                }
-                onClick={() => {}}
-            ></Button>
+            />
+            <CopyToClipboard
+                text={window.location.href}
+                onCopy={() => {
+                    alert('링크가 복사되었습니다.')
+                }}
+            >
+                <Button
+                    label="링크복사"
+                    iconUrl={
+                        'https://cdn0.iconfinder.com/data/icons/evericons-24px-vol-1/24/clipboard-64.png'
+                    }
+                    onClick={() => {}}
+                />
+            </CopyToClipboard>
         </Flex>
     )
 }
