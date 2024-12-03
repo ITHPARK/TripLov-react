@@ -24,18 +24,34 @@ const Navbar = () => {
             // 유저 정보가 있을 때.
 
             return (
-                <Link to="/my">
-                    <img
-                        src={
-                            user.photoURL ??
-                            'https://cdn2.iconfinder.com/data/icons/squircle-ui/32/Avatar-64.png'
-                        }
-                        alt="유저이미지"
-                        width={40}
-                        height={40}
-                        style={{ borderRadius: '50%' }}
-                    />
-                </Link>
+                <Flex
+                    css={css`
+                        gap: 5px;
+                    `}
+                >
+                    <Link to="/my">
+                        <img
+                            src={
+                                user.photoURL ??
+                                'https://cdn2.iconfinder.com/data/icons/squircle-ui/32/Avatar-64.png'
+                            }
+                            alt="유저이미지"
+                            width={30}
+                            height={30}
+                            style={{ borderRadius: '50%' }}
+                        />
+                    </Link>
+                    <Link to="/settings">
+                        <img
+                            src={
+                                'https://cdn3.iconfinder.com/data/icons/web-and-mobile-ui-smooth-line-3/48/122-64.png'
+                            }
+                            alt="설정 아이콘"
+                            width={30}
+                            height={30}
+                        />
+                    </Link>
+                </Flex>
             )
         }
 

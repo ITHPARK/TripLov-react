@@ -61,7 +61,7 @@ export const AlertContextProvider = ({
         [close],
     )
 
-    //open의 값을 메모이제이션 (useCallback으로는 함수만 저장 useMemo로 모든 파라미터의 값을 다 저장)
+    //open의 값을 메모이제이션. provider에서 제공하는게 open이다. (useCallback으로는 함수만 저장 useMemo로 모든 파라미터의 값을 다 저장)
     const values = useMemo(() => ({ open }), [open])
 
     return (
