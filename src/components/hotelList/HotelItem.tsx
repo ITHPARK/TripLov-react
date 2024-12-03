@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, MouseEvent } from 'react'
 import { HotelProps } from '@/models/hotel'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
@@ -11,7 +11,19 @@ import { formatTime } from '@/utils/formatTime'
 import { differenceInMilliseconds, parseISO } from 'date-fns'
 import { Link } from 'react-router-dom'
 
-const HotelItem = ({ hotel }: { hotel: HotelProps }) => {
+const HotelItem = ({
+    hotel,
+    isLike,
+    onLike,
+}: {
+    hotel: HotelProps
+    isLike: boolean
+    onLike: ({
+        hotel,
+    }: {
+        hotel: Pick<HotelProps, 'name' | 'mainImageUrl' | 'id'>
+    }) => void
+}) => {
     const [remaining, setRemaining] = useState(0)
 
     useEffect(() => {
@@ -54,6 +66,18 @@ const HotelItem = ({ hotel }: { hotel: HotelProps }) => {
 
         return <Tag>{name.concat(promoText)}</Tag>
     }
+
+    const handleLike = (e: MouseEvent<HTMLImageElement>) => {
+        e.preventDefault()
+        onLike({
+            hotel: {
+                name: hotel.name,
+                id: hotel.id,
+                mainImageUrl: hotel.mainImageUrl,
+            },
+        })
+    }
+
     return (
         <Link to={`/hotel/${hotel.id}`}>
             <ListRow
@@ -73,11 +97,35 @@ const HotelItem = ({ hotel }: { hotel: HotelProps }) => {
                 }
                 right={
                     <Flex direction="column" align="center">
-                        <img
-                            src={hotel.mainImageUrl}
-                            alt={hotel.name}
-                            css={imageBox}
-                        />
+                        <div
+                            css={css`
+                                position: relative;
+                            `}
+                        >
+                            <span css={imageHeart} onClick={handleLike}>
+                                {isLike ? (
+                                    <img
+                                        src="https://cdn4.iconfinder.com/data/icons/twitter-29/512/166_Heart_Love_Like_Twitter-64.png"
+                                        alt="찜하기 이미지"
+                                        width="100%"
+                                        height="100%"
+                                    />
+                                ) : (
+                                    <img
+                                        src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-3/16/heart-64.png"
+                                        alt="찜하기 이미지"
+                                        width="100%"
+                                        height="100%"
+                                    />
+                                )}
+                            </span>
+                            <img
+                                src={hotel.mainImageUrl}
+                                alt={hotel.name}
+                                css={imageBox}
+                            />
+                        </div>
+
                         <Text typography="t6" bold={true}>
                             {formatNumber(hotel.price)}원
                         </Text>
@@ -98,6 +146,14 @@ const imageBox = css`
     height: 110px;
     border-radius: 5px;
     object-fit: cover;
+`
+
+const imageHeart = css`
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 `
 
 export default HotelItem

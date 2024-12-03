@@ -48,7 +48,7 @@ const Navbar = () => {
         }
 
         return null
-    }, [user, showSignButton, handleLogOut])
+    }, [user, showSignButton])
 
     return (
         <Flex

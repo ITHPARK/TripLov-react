@@ -5,6 +5,7 @@ import Spacing from '@shared/Spacing'
 import HotelItem from '@/components/hotelList/HotelItem'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import { css } from '@emotion/react'
+import useLikes from '@hooks/useLikes'
 
 const HotelList = () => {
     const lastHotelRef = useIntersectionObserver(() => {
@@ -12,6 +13,8 @@ const HotelList = () => {
             loadMore()
         }
     })
+
+    const { data: likes, mutate: like } = useLikes()
 
     /*
     hotels : 호텔 데이터 배열
@@ -37,8 +40,16 @@ const HotelList = () => {
                 {hotels?.map((hotel, index) => {
                     const isLast = index === hotels.length - 1
                     return (
-                        <Fragment>
-                            <HotelItem hotel={hotel} key={index} />
+                        <Fragment key={index}>
+                            <HotelItem
+                                hotel={hotel}
+                                isLike={Boolean(
+                                    likes?.find(
+                                        (like) => like.hotelId === hotel.id,
+                                    ),
+                                )}
+                                onLike={like}
+                            />
                             <Spacing
                                 size={7}
                                 backgroundColor={'gray100'}

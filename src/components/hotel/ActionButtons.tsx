@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { css } from '@emotion/react'
 import Flex from '@shared/Flex'
 import Spacing from '@shared/Spacing'
@@ -6,20 +6,42 @@ import Text from '@shared/Text'
 import { HotelProps } from '@/models/hotel'
 import useShare from '@/hooks/useShare'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import useLikes from '@hooks/useLikes'
 
 const ActionButtons = ({ hotel }: { hotel: HotelProps }) => {
-    const share = useShare()
+    const [isLike, setIsLike] = useState(false)
 
-    const { name, comment, mainImageUrl } = hotel
+    const share = useShare()
+    const { data: likes, isLoading: likeLoading, mutate: like } = useLikes()
+
+    const { name, comment, mainImageUrl, id } = hotel
+
+    useEffect(() => {
+        setIsLike(Boolean(likes?.find((like) => like.hotelId === hotel.id)))
+    }, [likes, hotel.id])
+
+    if (likeLoading) {
+        return <div>Loading...</div>
+    }
 
     return (
         <Flex justify="space-between" css={ContainerStyles}>
             <Button
                 label="찜하기"
                 iconUrl={
-                    'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-64.png'
+                    isLike
+                        ? 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-64.png'
+                        : 'https://cdn1.iconfinder.com/data/icons/bootstrap-vol-3/16/heart-64.png'
                 }
-                onClick={() => {}}
+                onClick={() => {
+                    like({
+                        hotel: {
+                            name,
+                            mainImageUrl,
+                            id,
+                        },
+                    })
+                }}
             />
             <Button
                 label="공유하기"
